@@ -1,0 +1,68 @@
+import { AcademicReference } from '../types';
+
+export const academicReferencesList: AcademicReference[] = [
+  {
+    id: 'ref-1',
+    number: 1,
+    citation: 'Miaskiewicz, T., & Kozar, K. A. (2011). Personas and user-centered design: How can personas benefit product design processes? Design Studies, 32(5). DOI: 10.1016/j.destud.2011.03.003',
+    description: 'يتناول هذا البحث Persona بوصفها وسيلة لتمثيل احتياجات وخصائص المستخدمين داخل عمليات التصميم، ويناقش الفوائد التي يمكن أن تقدمها في إيصال فهم المستخدم إلى فرق العمل.',
+    frameworkRelevance: 'يدعم الخلفية العامة لمفهوم Persona، استخدامها في تمثيل العميل، واستخدام Persona كوسيلة تواصل واتخاذ قرار داخل المنظومة التشغيلية.',
+    componentMapped: 'Collection Persona & Persona Cards (Chapter 14, 15)',
+  },
+  {
+    id: 'ref-2',
+    number: 2,
+    citation: 'Jansen, B. J., Salminen, J., & Jung, S. (2020). Data-Driven Personas for Enhanced User Understanding: Combining Empathy with Rationality for Better Insights to Analytics. Data and Information Management, 4(1), 1–17. DOI: 10.2478/dim-2020-0005',
+    description: 'يناقش البحث مفهوم Data-Driven Personas وإمكانية الاستفادة من البيانات الرقمية والتحليلات لتطوير شخصيات ترتكز على البيانات الفعلية بدلاً من الافتراضات غير المختبرة.',
+    frameworkRelevance: 'يدعم الاتجاه العام وراء Data-Driven Collection Persona وتحديث الشخصيات استنادًا للمعلومات واستخدامها كواجهة تفسيرية لنتائج التحليل.',
+    componentMapped: 'Data-Driven Persona & Feature Engineering (Chapter 11, 13)',
+  },
+  {
+    id: 'ref-3',
+    number: 3,
+    citation: 'Salminen, J., Jung, S.-G., & Jansen, B. J. (2022). Developing Persona Analytics Towards Persona Science. Proceedings of the 27th International Conference on Intelligent User Interfaces. DOI: 10.1145/3490099.3511144',
+    description: 'يقدم العمل مفهوم Persona Analytics ويبحث في طرق تحليل كيفية تفاعل المستخدمين مع الشخصيات المستندة إلى البيانات وتوسيعها لمنظومة تفاعلية.',
+    frameworkRelevance: 'يدعم توجه المصنف نحو اعتبار Persona واجهة تحليلية تفاعلية (Analytical Interface) وتطوير Persona Snapshot و Persona Journey و Transitions.',
+    componentMapped: 'Persona Analytics, Snapshots & Journey (Chapter 13, 37)',
+  },
+  {
+    id: 'ref-4',
+    number: 4,
+    citation: 'Kahneman, D., & Tversky, A. (1979). Prospect Theory: An Analysis of Decision under Risk. Econometrica, 47(2), 263–291.',
+    description: 'يعد البحث من الأعمال التأسيسية في دراسة اتخاذ القرار تحت المخاطر، ويقدم Prospect Theory بوصفها بديلاً وصفيًا لافتراضات المنفعة المتوقعة الكلاسيكية.',
+    frameworkRelevance: 'الاستفادة من خلفية الاقتصاد السلوكي في تأكيد أن السلوك المالي الفعلي لا يمكن دائمًا تفسيره بافتراض عقلاني مثالي، والاهتمام بالسياق الفعلي والتاريخي.',
+    componentMapped: 'Behavioral Analytics & Decision Context (Chapter 8, 12)',
+  },
+  {
+    id: 'ref-5',
+    number: 5,
+    citation: 'Iyengar, S. S., & Lepper, M. R. (2000). When Choice Is Demotivating: Can One Desire Too Much of a Good Thing? Journal of Personality and Social Psychology, 79(6), 995–1006. DOI: 10.1037/0022-3514.79.6.995',
+    description: 'درس الباحثان أثر زيادة عدد الخيارات، وأظهرت النتائج أن كثرة الخيارات المتاحة تقلل الدافعية وإتمام القرار في بعض السياقات.',
+    frameworkRelevance: 'يدعم منطق تقليل تشتت الخيارات (Reducing Choice Overload) في استراتيجيات CP-02 و CP-03 بعرض خيارين ملائمين بدلاً من إغراق العميل بقوائم معقدة.',
+    componentMapped: 'Choice Architecture & Solution Design (Chapter 14, 24)',
+  },
+  {
+    id: 'ref-6',
+    number: 6,
+    citation: 'National Institute of Standards and Technology — NIST. (2023). Artificial Intelligence Risk Management Framework (AI RMF 1.0). NIST AI 100-1',
+    description: 'يقدم إطارًا لإدارة المخاطر المرتبطة بتصميم وتطوير واستخدام أنظمة الذكاء الاصطناعي، وينظم الأنشطة حول وظائف Govern و Map و Measure و Manage.',
+    frameworkRelevance: 'الاستفادة من مبادئ إدارة النماذج المسؤولة: الحوكمة، سجل النماذج، التحقق، المراقبة المستمرة، الإشراف البشري، وإدارة التغيير.',
+    componentMapped: 'Governance, Model Register & Audit (Chapter 29, 30)',
+  },
+  {
+    id: 'ref-7',
+    number: 7,
+    citation: 'World Intellectual Property Organization — WIPO. Copyright: Scope of Protection & WIPO Copyright Treaty (Article 2).',
+    description: 'توضح WIPO أن حماية حق المؤلف تتعلق بالتعبير عن الأفكار والتنظيم والصياغة، ولا تمتد لذاتها إلى الأفكار أو المبادئ الرياضية المجردة.',
+    frameworkRelevance: 'تأصيل حقوق المصنف في التعبير المبتكر، والتنظيم، والمصفوفات، والبطاقات، والتركيب التطبيقي الخاص بـ ™Collection Persona Framework.',
+    componentMapped: 'Originality Statement & Author Expression (Chapter 6, 42)',
+  },
+  {
+    id: 'ref-8',
+    number: 8,
+    citation: 'الهيئة السعودية للملكية الفكرية — SAIP. الأدلة والإرشادات المتعلقة بحقوق المؤلف والمصنفات والإسهام البشري.',
+    description: 'الجهة التنظيمية المختصة في المملكة العربية السعودية لحماية الملكية الفكرية وتسجيل المصنفات معايير الإسهام البشري الأصيل في التأليف.',
+    frameworkRelevance: 'توثيق المصنف كعمل علمي وتطبيقي مستقل للأستاذ ماجد عامر السفياني خاضع للأنظمة المرعية في المملكة.',
+    componentMapped: 'Regulatory & IP Compliance (Chapter 6, 42)',
+  },
+];

@@ -1,0 +1,6 @@
+{
+  "name": "Collection Persona للتحصيل المصرفي",
+  "description": "المصنف المرجعي والتطبيقي الكامل لنموذج Collection Persona للتحصيل المصرفي ودعم القرار (2026) — نسخة A4 كاملة الألوان للطباعة و PDF مع المخططات والتحليلات البصرية.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

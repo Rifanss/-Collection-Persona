@@ -1,0 +1,206 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-arabic: 'IBM Plex Sans Arabic', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  html {
+    direction: rtl;
+    text-align: right;
+    font-family: var(--font-arabic);
+    letter-spacing: normal !important;
+    word-spacing: normal;
+    font-kerning: normal;
+    font-variant-ligatures: normal;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    direction: rtl;
+    text-align: right;
+    letter-spacing: normal !important;
+  }
+
+  /* BiDi text handling */
+  [dir="ltr"] {
+    direction: ltr;
+    text-align: left;
+    unicode-bidi: isolate;
+  }
+
+  [dir="rtl"] {
+    direction: rtl;
+    text-align: right;
+    unicode-bidi: isolate;
+  }
+
+  .en-term {
+    direction: ltr;
+    unicode-bidi: isolate;
+    display: inline-block;
+    font-family: 'JetBrains Mono', var(--font-arabic);
+  }
+}
+
+/* Print Specific Rules */
+@page {
+  size: A4 portrait;
+  margin: 12mm 14mm 12mm 14mm;
+}
+
+@media print {
+  html, body {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    color: #0f172a !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    font-size: 10.5pt !important;
+    line-height: 1.6 !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-page {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  .page-break-before {
+    break-before: page !important;
+    page-break-before: always !important;
+  }
+
+  .page-break-after {
+    break-after: page !important;
+    page-break-after: always !important;
+  }
+
+  .avoid-break-inside {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  .keep-with-next {
+    break-after: avoid !important;
+    page-break-after: avoid !important;
+  }
+
+  thead {
+    display: table-header-group !important;
+  }
+
+  tr {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  h1, h2, h3, h4 {
+    break-after: avoid !important;
+    page-break-after: avoid !important;
+  }
+
+  p, li {
+    orphans: 3 !important;
+    widows: 3 !important;
+  }
+}
+
+/* Screen Preview Styling */
+.a4-screen-page {
+  width: 100%;
+  max-width: 210mm;
+  min-height: auto;
+  padding: 1.25rem 1rem;
+  margin: 0 auto 1.5rem auto;
+  background: #ffffff;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.08), 0 2px 6px -1px rgba(15, 23, 42, 0.04);
+  border-radius: 0.75rem;
+  position: relative;
+  box-sizing: border-box;
+}
+
+@media (min-width: 640px) {
+  .a4-screen-page {
+    padding: 2rem 2.25rem;
+    border-radius: 0.875rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .a4-screen-page {
+    min-height: 297mm;
+    padding: 14mm 16mm;
+    border-radius: 4px;
+  }
+}
+
+@media print {
+  .a4-screen-page {
+    width: 100% !important;
+    max-width: none !important;
+    min-height: auto !important;
+    padding: 0 !important;
+    margin: 0 0 16mm 0 !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+  }
+}
+
+/* Touch & Scroll Utilities */
+.touch-scroll {
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Custom technical blueprint grid */
+.bg-blueprint-grid {
+  background-size: 20px 20px;
+  background-image: 
+    linear-gradient(to right, rgba(56, 189, 248, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(56, 189, 248, 0.08) 1px, transparent 1px);
+}
+
+.bg-dot-grid {
+  background-size: 16px 16px;
+  background-image: radial-gradient(rgba(148, 163, 184, 0.3) 1px, transparent 1px);
+}
+
+@media print {
+  /* Printable Modal Support */
+  .modal-print-wrapper {
+    position: static !important;
+    inset: auto !important;
+    overflow: visible !important;
+    max-height: none !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+    display: block !important;
+  }
+}
+
