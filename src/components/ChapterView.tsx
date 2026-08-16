@@ -13,6 +13,17 @@ import { DecisionTreeDiagram } from './diagrams/DecisionTreeDiagram';
 import { SystemIntegrationBlueprint } from './diagrams/SystemIntegrationBlueprint';
 import { FeedbackLoopDiagram } from './diagrams/FeedbackLoopDiagram';
 import { PlatformArchitectureDiagram } from './diagrams/PlatformArchitectureDiagram';
+import { FoundationsParadigmDiagram } from './diagrams/FoundationsParadigmDiagram';
+import { CollectionsProblemFunnelDiagram } from './diagrams/CollectionsProblemFunnelDiagram';
+import { DataTaxonomyDiagram } from './diagrams/DataTaxonomyDiagram';
+import { CustomerIntelligenceVectorDiagram } from './diagrams/CustomerIntelligenceVectorDiagram';
+import { PersonaTransitionLifecycleDiagram } from './diagrams/PersonaTransitionLifecycleDiagram';
+import { PersonaScoringFrameworkDiagram } from './diagrams/PersonaScoringFrameworkDiagram';
+import { GovernanceAndEthicsDiagram } from './diagrams/GovernanceAndEthicsDiagram';
+import { PilotProgressionPipelineDiagram } from './diagrams/PilotProgressionPipelineDiagram';
+import { ValueRealizationModelDiagram } from './diagrams/ValueRealizationModelDiagram';
+import { ChangeManagementBlueprintDiagram } from './diagrams/ChangeManagementBlueprintDiagram';
+import { AuditLineageArchitectureDiagram } from './diagrams/AuditLineageArchitectureDiagram';
 import { PersonaCardsGrid } from './PersonaCardsGrid';
 import { ScenariosView } from './ScenariosView';
 import { GlossaryView } from './GlossaryView';
@@ -28,49 +39,81 @@ export const ChapterView: React.FC<Props> = ({ chapter, partTitle, partNum }) =>
   // Determine if specific diagram needs to be embedded based on chapter number
   const renderChapterDiagram = (chNum: number) => {
     switch (chNum) {
+      case 1:
+        return <div className="my-6 avoid-break-inside"><FoundationsParadigmDiagram /></div>;
       case 2:
-        return <div className="my-6"><LayeredArchitectureDiagram /></div>;
+        return <div className="my-6 avoid-break-inside"><LayeredArchitectureDiagram /></div>;
+      case 3:
+        return <div className="my-6 avoid-break-inside"><CollectionsProblemFunnelDiagram /></div>;
+      case 4:
+        return <div className="my-6 avoid-break-inside"><DataTaxonomyDiagram /></div>;
+      case 5:
+        return <div className="my-6 avoid-break-inside"><CustomerIntelligenceVectorDiagram /></div>;
       case 7:
-        return <div className="my-6"><PersonaMatrixDiagram /></div>;
+        return <div className="my-6 avoid-break-inside"><PersonaMatrixDiagram /></div>;
+      case 8:
+      case 9:
+      case 10:
+      case 11:
+      case 12:
+      case 13:
+        return <div className="my-6 avoid-break-inside"><PersonaTransitionLifecycleDiagram /></div>;
       case 14:
       case 15:
-        return <div className="my-6"><PersonaCardsGrid /></div>;
+        return <div className="my-6 avoid-break-inside"><PersonaCardsGrid /></div>;
+      case 16:
+      case 17:
+      case 18:
+        return <div className="my-6 avoid-break-inside"><PersonaScoringFrameworkDiagram /></div>;
       case 19:
       case 20:
-        return <div className="my-6"><DecisionReadinessGatesDiagram /></div>;
+        return <div className="my-6 avoid-break-inside"><DecisionReadinessGatesDiagram /></div>;
       case 21:
       case 22:
         return (
-          <div className="my-6 space-y-6">
+          <div className="my-6 space-y-6 avoid-break-inside">
             <DecisionEngineFlowDiagram />
             <DecisionTreeDiagram />
           </div>
         );
+      case 23:
+      case 24:
+        return <div className="my-6 avoid-break-inside"><GovernanceAndEthicsDiagram /></div>;
       case 25:
-        return <div className="my-6"><NBCADecisionMapDiagram /></div>;
+        return <div className="my-6 avoid-break-inside"><NBCADecisionMapDiagram /></div>;
       case 26:
-        return <div className="my-6"><FeedbackLoopDiagram /></div>;
+        return <div className="my-6 avoid-break-inside"><FeedbackLoopDiagram /></div>;
       case 27:
       case 28:
         return (
-          <div className="my-6 space-y-6">
+          <div className="my-6 space-y-6 avoid-break-inside">
             <PlatformArchitectureDiagram />
             <SystemIntegrationBlueprint />
           </div>
         );
+      case 29:
+      case 30:
+        return <div className="my-6 avoid-break-inside"><PilotProgressionPipelineDiagram /></div>;
       case 31:
-        return <div className="my-6"><BalancedScorecardDiagram /></div>;
+        return <div className="my-6 avoid-break-inside"><BalancedScorecardDiagram /></div>;
+      case 32:
+        return <div className="my-6 avoid-break-inside"><ValueRealizationModelDiagram /></div>;
       case 33:
-        return <div className="my-6"><MaturityModelLadderDiagram /></div>;
+        return <div className="my-6 avoid-break-inside"><MaturityModelLadderDiagram /></div>;
+      case 34:
+        return <div className="my-6 avoid-break-inside"><ChangeManagementBlueprintDiagram /></div>;
       case 35:
-        return <div className="my-6"><ImplementationRoadmapTimeline /></div>;
+        return <div className="my-6 avoid-break-inside"><ImplementationRoadmapTimeline /></div>;
+      case 36:
+      case 37:
+        return <div className="my-6 avoid-break-inside"><AuditLineageArchitectureDiagram /></div>;
       case 38:
       case 39:
-        return <div className="my-6"><ScenariosView /></div>;
+        return <div className="my-6 avoid-break-inside"><ScenariosView /></div>;
       case 41:
-        return <div className="my-6"><GlossaryView /></div>;
+        return <div className="my-6 avoid-break-inside"><GlossaryView /></div>;
       case 42:
-        return <div className="my-6"><ReferencesView /></div>;
+        return <div className="my-6 avoid-break-inside"><ReferencesView /></div>;
       default:
         return null;
     }
@@ -79,7 +122,7 @@ export const ChapterView: React.FC<Props> = ({ chapter, partTitle, partNum }) =>
   return (
     <div className="a4-screen-page print-page bg-white text-slate-900 p-6 md:p-8 rounded-xl border border-slate-300 shadow-sm page-break-after">
       {/* Chapter Header */}
-      <div className="border-b-2 border-slate-900 pb-3 sm:pb-4 mb-4 sm:mb-6">
+      <div className="border-b-2 border-slate-900 pb-3 sm:pb-4 mb-4 sm:mb-6 avoid-break-inside">
         {partTitle && (
           <div className="text-[11px] sm:text-xs font-mono text-slate-500 mb-1 flex items-center gap-1.5 flex-wrap">
             <span className="font-bold text-sky-900 bg-sky-100 px-1.5 py-0.5 rounded">{partNum}</span>
@@ -92,7 +135,7 @@ export const ChapterView: React.FC<Props> = ({ chapter, partTitle, partNum }) =>
             <span className="leading-snug">{chapter.title}</span>
           </h2>
           {chapter.englishTitle && (
-            <span className="text-[11px] sm:text-xs font-mono text-slate-400 self-start sm:self-auto" dir="ltr">
+            <span className="text-[11px] sm:text-xs font-mono text-slate-500 self-start sm:self-auto" dir="ltr">
               {chapter.englishTitle}
             </span>
           )}
@@ -111,7 +154,7 @@ export const ChapterView: React.FC<Props> = ({ chapter, partTitle, partNum }) =>
 
             {/* Paragraphs */}
             {section.paragraphs && section.paragraphs.length > 0 && (
-              <div className="space-y-2.5 sm:space-y-3 text-xs sm:text-sm text-slate-700 leading-relaxed text-right sm:text-justify">
+              <div className="space-y-2.5 sm:space-y-3 text-xs sm:text-sm text-slate-700 leading-relaxed text-right">
                 {section.paragraphs.map((p, i) => (
                   <p key={i}>{p}</p>
                 ))}
@@ -159,7 +202,7 @@ export const ChapterView: React.FC<Props> = ({ chapter, partTitle, partNum }) =>
 
             {/* Callout */}
             {section.callout && (
-              <div className="p-3 sm:p-3.5 rounded-lg bg-sky-50 border-r-4 border-sky-800 text-xs sm:text-sm text-sky-950 font-medium my-3 leading-relaxed">
+              <div className="p-3 sm:p-3.5 rounded-lg bg-slate-50 border-r-4 border-sky-800 text-xs sm:text-sm text-slate-900 font-medium my-3 leading-relaxed border border-slate-200">
                 {typeof section.callout === 'string' ? section.callout : section.callout.text}
               </div>
             )}
@@ -172,3 +215,4 @@ export const ChapterView: React.FC<Props> = ({ chapter, partTitle, partNum }) =>
     </div>
   );
 };
+

@@ -1503,7 +1503,7 @@ export default function App() {
             {/* Executive Summary */}
             <ExecutiveSummaryView />
 
-            {/* All 42 Chapters sequentially */}
+            {/* All 42 Chapters sequentially (each chapter embeds its dedicated blueprints, grids, glossary, and citations) */}
             <div className="space-y-8 print:space-y-0">
               {allChapters.map((ch) => {
                 const part = getPartByChapterId(ch.id);
@@ -1518,20 +1518,10 @@ export default function App() {
               })}
             </div>
 
-            {/* Personas Reference Grid */}
-            <PersonaCardsGrid />
-
-            {/* Applied Scenarios */}
-            <ScenariosView />
-
-            {/* Appendices */}
-            <AppendicesView />
-
-            {/* Glossary */}
-            <GlossaryView />
-
-            {/* Academic References */}
-            <ReferencesView />
+            {/* Technical Appendices & Templates (Appendix A to R) */}
+            <div className="mt-8">
+              <AppendicesView />
+            </div>
 
           </div>
         )}

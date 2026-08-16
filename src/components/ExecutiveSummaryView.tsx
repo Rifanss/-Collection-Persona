@@ -18,7 +18,7 @@ export const ExecutiveSummaryView: React.FC = () => {
           </span>
         </div>
 
-        <div className="space-y-3 text-xs sm:text-sm text-slate-700 leading-relaxed text-justify">
+        <div className="space-y-3 text-xs sm:text-sm text-slate-700 leading-relaxed text-right">
           {(authorStatement.paragraphs || []).map((p, i) => (
             <p key={i}>{p}</p>
           ))}
@@ -27,7 +27,7 @@ export const ExecutiveSummaryView: React.FC = () => {
 
       {/* Executive Summary */}
       <section className="space-y-5">
-        <div className="flex items-center justify-between border-b-2 border-slate-900 pb-2">
+        <div className="flex items-center justify-between border-b-2 border-slate-900 pb-2 avoid-break-inside">
           <h2 className="text-2xl font-bold text-slate-900 flex items-center gap-2">
             <Layers className="w-6 h-6 text-sky-800" />
             <span>{executiveSummary.title}</span>
@@ -38,43 +38,43 @@ export const ExecutiveSummaryView: React.FC = () => {
         </div>
 
         {/* Lead box */}
-        <div className="p-4 rounded-lg bg-slate-50 border-r-4 border-sky-800 text-slate-800 text-xs sm:text-sm font-medium leading-relaxed">
+        <div className="p-4 rounded-lg bg-slate-50 border-r-4 border-sky-800 border border-slate-200 text-slate-850 text-xs sm:text-sm font-medium leading-relaxed avoid-break-inside">
           {executiveSummary.lead}
         </div>
 
-        <div className="space-y-3 text-xs sm:text-sm text-slate-700 leading-relaxed text-justify">
+        <div className="space-y-3 text-xs sm:text-sm text-slate-700 leading-relaxed text-right">
           {(executiveSummary.paragraphs || []).map((p, i) => (
             <p key={i}>{p}</p>
           ))}
         </div>
 
         {/* Formula Box */}
-        <div className="p-3 bg-slate-900 text-sky-300 rounded font-mono text-xs text-center font-bold tracking-wide border border-slate-800 my-4" dir="ltr">
+        <div className="p-3.5 bg-slate-900 text-sky-300 rounded-lg font-mono text-xs text-center font-bold border border-slate-800 my-4 avoid-break-inside" dir="ltr">
           {executiveSummary.formulaContext}
         </div>
 
         {/* Traditional Question vs Persona Paradigm Shift */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 my-4 avoid-break-inside">
-          <div className="p-3.5 rounded bg-slate-50 border border-slate-200">
+          <div className="p-3.5 rounded-lg bg-slate-50 border border-slate-200">
             <span className="text-xs font-mono text-rose-700 font-bold block mb-1">السؤال التقليدي النمطي:</span>
             <p className="text-xs sm:text-sm font-semibold text-slate-800">
               «{executiveSummary.traditionalVsPersona.traditionalQuestion}»
             </p>
           </div>
-          <div className="p-3.5 rounded bg-sky-50 border border-sky-200">
+          <div className="p-3.5 rounded-lg bg-slate-50 border border-sky-300">
             <span className="text-xs font-mono text-sky-800 font-bold block mb-1">سؤال نموذج Collection Persona:</span>
-            <p className="text-xs sm:text-sm font-semibold text-sky-950">
+            <p className="text-xs sm:text-sm font-semibold text-slate-900">
               «{executiveSummary.traditionalVsPersona.personaQuestion}»
             </p>
           </div>
         </div>
 
         {/* Paradigm Shift Flow */}
-        <div className="p-3 rounded bg-slate-100 border border-slate-300 text-xs flex flex-col sm:flex-row items-center justify-between gap-2 font-mono avoid-break-inside">
+        <div className="p-3 rounded-lg bg-slate-100 border border-slate-300 text-xs flex flex-col sm:flex-row items-center justify-between gap-2 font-mono avoid-break-inside">
           <div className="text-slate-500" dir="ltr">
             FROM: {executiveSummary.paradigmShift.from}
           </div>
-          <div className="text-sky-800 font-bold" dir="ltr">
+          <div className="text-sky-900 font-bold" dir="ltr">
             TO: {executiveSummary.paradigmShift.to}
           </div>
         </div>

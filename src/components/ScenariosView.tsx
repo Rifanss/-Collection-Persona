@@ -103,41 +103,41 @@ export const ScenariosView: React.FC = () => {
               </div>
 
               {/* 3. Classification, Scores & Readiness */}
-              <div className="p-3.5 rounded-lg bg-sky-50 border border-sky-200 mb-4 avoid-break-inside">
+              <div className="p-3.5 rounded-lg bg-slate-50 border border-slate-200 mb-4 avoid-break-inside">
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 text-xs mb-3">
                   <div>
                     <span className="text-slate-500 block text-[11px]">الشخصية المصنفة (Persona):</span>
-                    <span className="font-bold text-sky-950">{sc.personaClassification?.primary}</span>
+                    <span className="font-bold text-slate-900">{sc.personaClassification?.primary}</span>
                   </div>
                   <div>
                     <span className="text-slate-500 block text-[11px]">درجة الثقة (Confidence):</span>
-                    <span className="font-bold text-sky-950 font-mono" dir="ltr">{sc.personaClassification?.confidence}</span>
+                    <span className="font-bold text-sky-900 font-mono" dir="ltr">{sc.personaClassification?.confidence}</span>
                   </div>
                   <div>
                     <span className="text-slate-500 block text-[11px]">جاهزية القرار (Readiness):</span>
-                    <span className="font-bold text-sky-950 font-mono" dir="ltr">{sc.personaClassification?.readiness}</span>
+                    <span className="font-bold text-emerald-900 font-mono" dir="ltr">{sc.personaClassification?.readiness}</span>
                   </div>
                 </div>
 
                 {/* Score Badges */}
                 <div className="grid grid-cols-5 gap-1.5 text-center text-[10px] font-mono">
-                  <div className="p-1 bg-white rounded border border-sky-200">
+                  <div className="p-1 bg-white rounded border border-slate-200">
                     <span className="text-slate-400 block">Capacity</span>
                     <span className="font-bold text-slate-800">{sc.scores?.capacity ?? 0}/100</span>
                   </div>
-                  <div className="p-1 bg-white rounded border border-sky-200">
+                  <div className="p-1 bg-white rounded border border-slate-200">
                     <span className="text-slate-400 block">Willingness</span>
                     <span className="font-bold text-slate-800">{sc.scores?.willingness ?? 0}/100</span>
                   </div>
-                  <div className="p-1 bg-white rounded border border-sky-200">
+                  <div className="p-1 bg-white rounded border border-slate-200">
                     <span className="text-slate-400 block">Response</span>
                     <span className="font-bold text-slate-800">{sc.scores?.responsiveness ?? 0}/100</span>
                   </div>
-                  <div className="p-1 bg-white rounded border border-sky-200">
+                  <div className="p-1 bg-white rounded border border-slate-200">
                     <span className="text-slate-400 block">Complexity</span>
                     <span className="font-bold text-slate-800">{sc.scores?.complexity ?? 0}/100</span>
                   </div>
-                  <div className="p-1 bg-white rounded border border-sky-200">
+                  <div className="p-1 bg-white rounded border border-slate-200">
                     <span className="text-slate-400 block">Digital</span>
                     <span className="font-bold text-slate-800">{sc.scores?.digitalReadiness ?? 0}/100</span>
                   </div>

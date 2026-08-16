@@ -34,7 +34,7 @@ export const PrintCoverPage: React.FC = () => {
           <span>منظومة دعم القرار والتحليل متعدد الأبعاد للتحصيل المصرفي</span>
         </div>
 
-        <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white leading-tight mb-3 sm:mb-4">
+        <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white leading-tight mb-3 sm:mb-4">
           {publicationMeta.title}
         </h1>
 
